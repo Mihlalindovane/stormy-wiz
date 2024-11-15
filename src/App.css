@@ -1,0 +1,113 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4e4e4e, #2c3e50); /* Dark stormy gradient */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1e90ff; /* Electric blue stormy color */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  width: 75%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  background: #333;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  background-color: #444;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4682b4; /* Slightly darker shade */
+}
+
+.loading-text,
+.error-text {
+  font-size: 1.2rem;
+  color: #ffcc00; /* Bright warning color */
+}
+
+.weather-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.weather-container h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.weather-info {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search-container input {
+    width: 60%;
+  }
+
+  .weather-container {
+    padding: 15px;
+  }
+}
