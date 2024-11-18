@@ -7,13 +7,21 @@
 }
 
 body {
-  background: linear-gradient(135deg, #4e4e4e, #2c3e50); /* Dark stormy gradient */
-  color: white;
+  background: linear-gradient(135deg, #f0e4e4, #2c3e50); /* Dark stormy gradient */
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+ 
 }
+
+body {
+  background-image: url('../public/images/storm-stormy-ocean-blue-wallpaper-preview.jpg');
+  background-size: cover;
+}
+
+
 
 .App {
   text-align: center;
@@ -27,13 +35,20 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: #1e90ff; /* Electric blue stormy color */
+  color: #f1f2f3; 
   margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  text-shadow: 2px 2px 5px rgba(181, 241, 245, 0.5); 
 }
 
 .search-container {
-  margin-bottom: 30px;
+  .search-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the button and input */
+    position: relative;
+  }
+  
 }
 
 input {
@@ -43,43 +58,48 @@ input {
   border: none;
   border-radius: 5px;
   margin-right: 10px;
-  background: #333;
-  color: white;
+  background: #413d3d;
+  color: rgb(10, 10, 10);
   transition: background-color 0.3s ease;
 }
 
 input:focus {
   outline: none;
-  background-color: #444;
+  background-color: #524f4f;
+  color: rgb(17, 17, 17);
 }
 
-button {
+.search-button {
   padding: 12px 20px;
   font-size: 1.1rem;
   background-color: #1e90ff;
-  color: white;
+  color: rgb(26, 25, 25);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+  margin-top: 20px; /* space between input and button */
+  }
+  
 
 button:hover {
-  background-color: #4682b4; /* Slightly darker shade */
+  background-color: #0c5896; /* Slightly darker shade */
 }
 
 .loading-text,
 .error-text {
   font-size: 1.2rem;
-  color: #ffcc00; /* Bright warning color */
+  color: #ffcc00; 
 }
 
 .weather-container {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(153, 149, 149, 0.7);
   padding: 20px;
   border-radius: 10px;
+  font-weight: bold;
   margin-top: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  color: rgb(247, 237, 242);
 }
 
 .weather-container h2 {
@@ -90,8 +110,9 @@ button:hover {
 
 .weather-info {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #f7f0f0;
   margin: 5px 0;
+  font-weight: bold;
 }
 
 @media (max-width: 600px) {
@@ -101,6 +122,7 @@ button:hover {
 
   h1 {
     font-size: 2rem;
+    color: white;
   }
 
   .search-container input {
@@ -111,3 +133,93 @@ button:hover {
     padding: 15px;
   }
 }
+
+
+.forecast-container {
+  display: flex;
+  justify-content: space-around; /* Evenly spaced blocks */
+  background: rgba(117, 114, 114, 0.925);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+
+.forecast-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align each block */
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 100px;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.forecast-block:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.forecast-date {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.forecast-temp {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.forecast-description {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.forecast-day {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+.forecast-day:last-child {
+  border-bottom: none; /* Remove border for the last forecast */
+}
+
+.suggestions-list {
+  position: absolute;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestions-list li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
