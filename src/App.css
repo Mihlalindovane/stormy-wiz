@@ -1,4 +1,4 @@
-/* App.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 
 body {
   background: linear-gradient(135deg, #f0e4e4, #2c3e50); /* Dark stormy gradient */
-  color: rgb(0, 0, 0);
+  color: rgb(248, 244, 244);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(22, 20, 20, 0.5); /* Semi-transparent background */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -58,15 +58,15 @@ input {
   border: none;
   border-radius: 5px;
   margin-right: 10px;
-  background: #413d3d;
-  color: rgb(10, 10, 10);
+  background: #6e7881;
+  color: rgb(247, 233, 233);
   transition: background-color 0.3s ease;
 }
 
 input:focus {
   outline: none;
   background-color: #524f4f;
-  color: rgb(17, 17, 17);
+  color: rgb(247, 245, 245);
 }
 
 .search-button {
@@ -83,7 +83,7 @@ input:focus {
   
 
 button:hover {
-  background-color: #0c5896; /* Slightly darker shade */
+  background-color: #0c5896; 
 }
 
 .loading-text,
@@ -201,16 +201,17 @@ button:hover {
 
 .suggestions-list {
   position: absolute;
-  background: #fff;
+  background: #6e7881;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgb(143, 179, 231);
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 50%;
   max-height: 150px;
   overflow-y: auto;
   z-index: 10;
+  color: white;
 }
 
 .suggestions-list li {
