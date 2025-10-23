@@ -3,7 +3,7 @@ Deployed in vercel: https://stormy-wiz.vercel.app/
 
 A simple, responsive weather app built with **React** and powered by the **OpenWeatherMap API**. It allows users to search for any city and view current weather conditions, including temperature, humidity, and weather description.
 
-
+Stormy-wiz Picture
 ## Features
 
 * Search weather by **city** name
